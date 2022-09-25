@@ -16,16 +16,26 @@ function initMap() {
 
     infoWindow = L.marker([37.65012598689348, -121.8916079152317]).addTo(map);
 
+    function onEachDistrict(feature, layer) {
+        // does this feature have a property named popupContent?
+        if (feature.properties && feature.properties.DISTRICT) {
+            layer.bindPopup(`DISTRICT ${feature.properties.DISTRICT}`);
+        }
+    }
+
     L.geoJson(
         districts,
         {
             style: function (feature) {
                 switch (feature.properties.DISTRICT) {
-                    case '1': return { color: "#ff0000" };
-                    case '2': return { color: "#0000ff" };
+                    case '1': return { color: "rgb(0, 150, 154)" };
+                    case '2': return { color: "rgb(154, 0, 80)" };
+                    case '3': return { color: "rgb(255, 188, 0)" };
+                    case '4': return { color: "rgb(134, 255, 138)" };
                     default: return { color: "#ff1000" };
                 }
-            }
+            },
+            onEachFeature: onEachDistrict
         }
     ).addTo(map);
 
