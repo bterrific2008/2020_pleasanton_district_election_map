@@ -95,8 +95,8 @@ function _handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.openPopup();
 }
 
-function initialize() {
+function init() {
     initMap();
 }
 
-window.initialize = initialize;
+init();
