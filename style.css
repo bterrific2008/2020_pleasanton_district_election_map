@@ -3,15 +3,13 @@
  * Copyright 2019 Google LLC. All Rights Reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
-html {
-    height: 100%;
-}
 
 body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-size: 1rem;
 }
 
 #map {
@@ -33,7 +31,7 @@ body {
 .address_label {
     font-size: 1.5em;
     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
-               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+        1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
 .center {
